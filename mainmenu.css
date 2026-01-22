@@ -155,3 +155,8 @@ body { background-color: var(--dark-bg); color: var(--text-white); font-family: 
     text-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Phát sáng nhẹ */
     transform: translateY(-2px); /* Nhấc nhẹ chữ lên */
 }
+.text-muted small {
+    color: var(--text-white);
+    letter-spacing: 1px;
+    font-size: 12px;
+}

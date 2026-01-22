@@ -231,7 +231,7 @@
 
     <section class="brand-section py-4 border-top border-secondary">
         <div class="container text-center">
-            <p class="text-muted small text-uppercase mb-3">Đối tác chiến lược</p>
+            <p class="text-white small text-uppercase mb-3">Đối tác chiến lược</p>
             <div class="d-flex justify-content-center gap-5 flex-wrap opacity-50">
                 <i class="fa-brands fa-cc-visa fa-3x text-light"></i>
                 <i class="fa-brands fa-cc-mastercard fa-3x text-light"></i>

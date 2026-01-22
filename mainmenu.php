@@ -51,7 +51,7 @@
     <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
 
     <div class="news-ticker-bar">
-        <div class="ticker-label">BREAKING</div>
+        <div class="ticker-label">NEWS</div>
         <div class="ticker-content">
             <marquee scrollamount="8">
                 <span class="ticker-item"><i class="fa-solid fa-trophy text-warning"></i> Chúc mừng <b>Minh Nhựa</b> thắng đấu giá McLaren Senna (28 Tỷ)</span>

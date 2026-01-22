@@ -22,7 +22,17 @@ body { background-color: var(--dark-bg); color: var(--text-white); font-family: 
 .btn-remove { position: absolute; top: 5px; right: 5px; color: #ff4757; background: none; border: none; cursor: pointer; }
 
 /* Hero & Ticker */
-.news-ticker-bar { margin-top: 60px; background: #000; border-bottom: 1px solid #333; display: flex; align-items: center; height: 40px; font-size: 13px; }
+.news-ticker-bar {
+    margin-top: 86px; /* Tăng từ 60px lên 76px (hoặc 80px) để né Navbar */
+    background: #000;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 13px;
+    position: relative;
+    z-index: 900; /* Đảm bảo nó không bị các element khác đè */
+}
 .ticker-label { background: #d63031; color: #fff; padding: 0 15px; height: 100%; display: flex; align-items: center; font-weight: 700; }
 .ticker-content { flex: 1; overflow: hidden; color: var(--text-gray); }
 .ticker-item { margin-right: 50px; }
@@ -110,3 +120,38 @@ body { background-color: var(--dark-bg); color: var(--text-white); font-family: 
 .process-box:hover { transform: translateY(-5px); }
 .icon-circle { width: 60px; height: 60px; background: var(--card-bg); border: 2px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--primary); margin: 0 auto 15px; }
 .news-card { border-radius: 8px; overflow: hidden; }
+
+/*HOVER*/
+.nav-item .nav-link {
+    position: relative;
+    padding-bottom: 5px; /* Khoảng cách cho gạch chân */
+    transition: all 0.3s ease;
+}
+
+/* Tạo thanh gạch chân ẩn ở giữa */
+.nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary); /* Màu vàng cam */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%); /* Căn giữa */
+    opacity: 0;
+}
+
+/* Khi Hover hoặc Active: Thanh gạch chân dài ra 100% */
+.nav-item .nav-link:hover::after,
+.nav-item .nav-link.active::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Hiệu ứng chữ khi Hover */
+.nav-item .nav-link:hover {
+    color: var(--primary) !important;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Phát sáng nhẹ */
+    transform: translateY(-2px); /* Nhấc nhẹ chữ lên */
+}
